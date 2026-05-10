@@ -108,6 +108,8 @@ body::before{
   gap:45px;
 
   list-style:none;
+
+  align-items:center;
 }
 
 .navbar a{
@@ -207,15 +209,74 @@ body::before{
   backdrop-filter:blur(14px);
 
   transition:0.4s;
+
+  animation:
+  faqFloat 6s ease-in-out infinite;
+}
+
+.faq-card:nth-child(2){
+  animation-duration:7s;
+}
+
+.faq-card:nth-child(3){
+  animation-duration:8s;
 }
 
 .faq-card:hover{
-  transform:translateY(-5px);
-
-  border-color:rgba(255,255,255,0.18);
+  transform:
+  translateY(-12px)
+  scale(1.01);
 
   box-shadow:
-  0 0 40px rgba(255,255,255,0.05);
+  0 0 45px rgba(255,255,255,0.06);
+
+  border-color:
+  rgba(255,255,255,0.18);
+}
+
+.faq-card::before{
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  top:-70px;
+  right:-70px;
+
+  background:
+  radial-gradient(
+  circle,
+  rgba(255,255,255,0.05),
+  transparent 70%
+  );
+
+  filter:blur(45px);
+
+  opacity:0;
+
+  transition:0.5s ease;
+}
+
+.faq-card:hover::before{
+  opacity:1;
+}
+
+@keyframes faqFloat{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-6px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
 }
 
 .faq-question{
@@ -233,6 +294,8 @@ body::before{
 
   align-items:center;
 
+  gap:20px;
+
   padding:38px;
 
   font-size:22px;
@@ -245,11 +308,22 @@ body::before{
 .plus{
   font-size:34px;
 
-  transition:0.4s;
+  transition:
+  transform 0.45s ease,
+  color 0.3s ease;
+
+  flex-shrink:0;
 }
 
 .plus.rotate{
   transform:rotate(45deg);
+}
+
+.faq-card:hover .plus{
+  color:white;
+
+  text-shadow:
+  0 0 12px rgba(255,255,255,0.6);
 }
 
 .faq-answer{
@@ -311,17 +385,29 @@ body::before{
   transition:0.45s;
 
   backdrop-filter:blur(12px);
+
+  animation:
+  updateFloat 7s ease-in-out infinite;
+}
+
+.update-card:nth-child(2){
+  animation-duration:8s;
+}
+
+.update-card:nth-child(3){
+  animation-duration:9s;
 }
 
 .update-card:hover{
   transform:
-  translateY(-10px)
-  scale(1.02);
-
-  border-color:rgba(255,255,255,0.18);
+  translateY(-18px)
+  scale(1.03);
 
   box-shadow:
-  0 0 50px rgba(255,255,255,0.07);
+  0 0 60px rgba(255,255,255,0.08);
+
+  border-color:
+  rgba(255,255,255,0.2);
 }
 
 .card-glow{
@@ -341,6 +427,60 @@ body::before{
   right:-60px;
 
   filter:blur(40px);
+}
+
+.update-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:-120%;
+
+  left:-40%;
+
+  width:80px;
+  height:300%;
+
+  background:
+  linear-gradient(
+  to right,
+  transparent,
+  rgba(255,255,255,0.08),
+  transparent
+  );
+
+  transform:rotate(20deg);
+
+  animation:
+  shineSweep 7s linear infinite;
+}
+
+@keyframes shineSweep{
+
+  from{
+    left:-50%;
+  }
+
+  to{
+    left:140%;
+  }
+
+}
+
+@keyframes updateFloat{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
 }
 
 .update-tag{
@@ -401,202 +541,181 @@ body::before{
   transition-delay:0.25s;
 }
 
+/* TABLET */
+
+@media(max-width:1024px){
+
+  .hero-content h1{
+    font-size:82px;
+  }
+
+  .faq-section{
+    padding:0 40px 100px;
+  }
+
+  .updates-grid{
+    grid-template-columns:1fr 1fr;
+
+    padding:0 40px 100px;
+  }
+
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
 
+  body{
+    overflow-x:hidden;
+  }
+
+  /* NAVBAR */
+
+  .navbar{
+    height:auto;
+
+    padding:20px;
+
+    flex-direction:column;
+
+    gap:18px;
+  }
+
+  .logo{
+    position:relative;
+
+    left:0;
+
+    top:0;
+
+    transform:none;
+
+    font-size:20px;
+  }
+
+  .navbar ul{
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+  }
+
+  .navbar a{
+    font-size:10px;
+
+    letter-spacing:2px;
+  }
+
+  /* HERO */
+
+  .hero{
+    padding:180px 20px 100px;
+
+    min-height:auto;
+  }
+
+  .small{
+    font-size:11px;
+
+    letter-spacing:4px;
+  }
+
   .hero-content h1{
-    font-size:60px;
+    font-size:58px;
+
+    line-height:1;
+
+    letter-spacing:-2px;
   }
 
   .desc{
     font-size:18px;
+
+    line-height:1.7;
+
+    padding:0 10px;
   }
+
+  /* FAQ */
 
   .faq-section{
     padding:20px;
   }
 
+  .faq-question{
+    padding:24px;
+
+    font-size:18px;
+  }
+
+  .faq-answer p{
+    padding:0 24px 24px;
+
+    font-size:15px;
+
+    line-height:1.7;
+  }
+
+  .plus{
+    font-size:26px;
+  }
+
+  /* UPDATES */
+
   .updates-grid{
     grid-template-columns:1fr;
 
     padding:20px 20px 100px;
+
+    gap:24px;
+  }
+
+  .update-card{
+    padding:30px;
+
+    animation:none;
+  }
+
+  .update-card h2{
+    font-size:30px;
+  }
+
+  .update-text,
+  .update-card li{
+    font-size:14px;
+
+    line-height:1.7;
+  }
+
+  .faq-card{
+    animation:none;
   }
 
 }
 
-/* FAQ CARD ANIMATIONS */
+/* EXTRA SMALL DEVICES */
 
-.faq-card{
-  animation:
-  faqFloat 6s ease-in-out infinite;
-}
+@media(max-width:480px){
 
-.faq-card:nth-child(2){
-  animation-duration:7s;
-}
-
-.faq-card:nth-child(3){
-  animation-duration:8s;
-}
-
-@keyframes faqFloat{
-
-  0%{
-    transform:translateY(0px);
+  .hero-content h1{
+    font-size:42px;
   }
 
-  50%{
-    transform:translateY(-6px);
+  .desc{
+    font-size:15px;
   }
 
-  100%{
-    transform:translateY(0px);
+  .faq-question{
+    font-size:16px;
   }
 
-}
-
-/* FAQ HOVER */
-
-.faq-card:hover{
-  transform:
-  translateY(-12px)
-  scale(1.01);
-
-  box-shadow:
-  0 0 45px rgba(255,255,255,0.06);
-
-  border-color:
-  rgba(255,255,255,0.18);
-}
-
-/* FAQ GLOW */
-
-.faq-card::before{
-  content:"";
-
-  position:absolute;
-
-  width:220px;
-  height:220px;
-
-  top:-70px;
-  right:-70px;
-
-  background:
-  radial-gradient(
-  circle,
-  rgba(255,255,255,0.05),
-  transparent 70%
-  );
-
-  filter:blur(45px);
-
-  opacity:0;
-
-  transition:0.5s ease;
-}
-
-.faq-card:hover::before{
-  opacity:1;
-}
-
-/* PLUS ICON */
-
-.plus{
-  transition:
-  transform 0.45s ease,
-  color 0.3s ease;
-}
-
-.faq-card:hover .plus{
-  color:white;
-
-  text-shadow:
-  0 0 12px rgba(255,255,255,0.6);
-}
-
-/* UPDATE CARD ANIMATIONS */
-
-.update-card{
-  animation:
-  updateFloat 7s ease-in-out infinite;
-}
-
-.update-card:nth-child(2){
-  animation-duration:8s;
-}
-
-.update-card:nth-child(3){
-  animation-duration:9s;
-}
-
-@keyframes updateFloat{
-
-  0%{
-    transform:translateY(0px);
+  .update-card{
+    padding:24px;
   }
 
-  50%{
-    transform:translateY(-10px);
-  }
-
-  100%{
-    transform:translateY(0px);
-  }
-
-}
-
-/* UPDATE CARD HOVER */
-
-.update-card:hover{
-  transform:
-  translateY(-18px)
-  scale(1.03);
-
-  box-shadow:
-  0 0 60px rgba(255,255,255,0.08);
-
-  border-color:
-  rgba(255,255,255,0.2);
-}
-
-/* SHINE EFFECT */
-
-.update-card::before{
-  content:"";
-
-  position:absolute;
-
-  top:-120%;
-
-  left:-40%;
-
-  width:80px;
-  height:300%;
-
-  background:
-  linear-gradient(
-  to right,
-  transparent,
-  rgba(255,255,255,0.08),
-  transparent
-  );
-
-  transform:rotate(20deg);
-
-  animation:
-  shineSweep 7s linear infinite;
-}
-
-@keyframes shineSweep{
-
-  from{
-    left:-50%;
-  }
-
-  to{
-    left:140%;
+  .update-card h2{
+    font-size:24px;
   }
 
 }
