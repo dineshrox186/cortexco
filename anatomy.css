@@ -128,24 +128,6 @@ body::before{
   color:white;
 }
 
-@keyframes logoGlow{
-
-  0%{
-    text-shadow:none;
-  }
-
-  50%{
-    text-shadow:
-    0 0 15px rgba(255,255,255,0.5),
-    0 0 35px rgba(255,255,255,0.25);
-  }
-
-  100%{
-    text-shadow:none;
-  }
-
-}
-
 /* NAV */
 
 .navbar ul{
@@ -154,6 +136,8 @@ body::before{
   gap:45px;
 
   list-style:none;
+
+  align-items:center;
 }
 
 .navbar a{
@@ -514,6 +498,8 @@ body::before{
 
   align-items:center;
 
+  gap:20px;
+
   padding:38px;
 
   font-size:32px;
@@ -521,12 +507,16 @@ body::before{
   font-weight:700;
 
   cursor:pointer;
+
+  text-align:left;
 }
 
 .plus{
   font-size:34px;
 
   transition:0.4s ease;
+
+  flex-shrink:0;
 }
 
 .plus.rotate{
@@ -558,7 +548,7 @@ body::before{
 }
 
 .brain-dropdown.open{
-  max-height:800px;
+  max-height:1200px;
 
   opacity:1;
 }
@@ -622,30 +612,197 @@ body::before{
   transform:translateY(0);
 }
 
+/* TABLET */
+
+@media(max-width:1024px){
+
+  .hero-content h1{
+    font-size:82px;
+  }
+
+  .stats-section{
+    padding:20px 40px 100px;
+  }
+
+  .brain-sections{
+    padding:20px 40px 100px;
+  }
+
+  .brain-info-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
 
+  body{
+    overflow-x:hidden;
+  }
+
+  /* NAVBAR */
+
+  .navbar{
+    height:auto;
+
+    padding:20px;
+
+    flex-direction:column;
+
+    gap:18px;
+  }
+
+  .logo{
+    position:relative;
+
+    left:0;
+
+    top:0;
+
+    transform:none;
+
+    font-size:20px;
+  }
+
+  .navbar ul{
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+  }
+
+  .navbar a{
+    font-size:10px;
+
+    letter-spacing:2px;
+  }
+
+  /* HERO */
+
+  .hero{
+    padding:180px 20px 100px;
+
+    min-height:auto;
+  }
+
+  .small{
+    font-size:11px;
+
+    letter-spacing:4px;
+  }
+
   .hero-content h1{
-    font-size:60px;
+    font-size:58px;
+
+    line-height:1;
+
+    letter-spacing:-2px;
+  }
+
+  .desc{
+    font-size:18px;
+
+    line-height:1.7;
+
+    padding:0 10px;
   }
 
   .brain-bg img{
     width:850px;
+
+    opacity:0.12;
   }
+
+  .brain-glow{
+    width:450px;
+    height:450px;
+
+    filter:blur(60px);
+  }
+
+  /* STATS */
 
   .stats-section{
     grid-template-columns:1fr;
 
     padding:20px;
+
+    margin-top:0;
   }
+
+  .stat-card{
+    padding:40px 20px;
+  }
+
+  .stat-card h2{
+    font-size:48px;
+  }
+
+  .stat-card p{
+    font-size:13px;
+  }
+
+  /* BRAIN */
 
   .brain-sections{
     padding:20px;
   }
 
+  .brain-title{
+    padding:24px;
+
+    font-size:22px;
+  }
+
+  .brain-preview{
+    padding:0 24px 24px;
+  }
+
+  .brain-preview p{
+    font-size:15px;
+
+    line-height:1.7;
+  }
+
   .brain-info-grid{
     grid-template-columns:1fr;
+
+    padding:0 24px 24px;
+  }
+
+  .info-box{
+    padding:22px;
+  }
+
+  .info-box p{
+    font-size:14px;
+
+    line-height:1.7;
+  }
+
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media(max-width:480px){
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .desc{
+    font-size:15px;
+  }
+
+  .brain-title{
+    font-size:18px;
+  }
+
+  .stat-card h2{
+    font-size:40px;
   }
 
 }
