@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>thecortexco_ | FAQ</title>
+
+  <link rel="stylesheet" href="faq.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- PARTICLES -->
+
+  <div class="particles"></div>
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <div class="logo">
+      thecortexco_
+    </div>
+
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="anatomy.html">ANATOMY</a></li>
+      <li><a href="functions.html">FUNCTIONS</a></li>
+      <li><a href="faq.html" class="active-nav">FAQ</a></li>
+    </ul>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <p class="small reveal">
+        KNOWLEDGE HUB
+      </p>
+
+      <h1 class="reveal delay-1">
+        FAQ & <br>
+        BRAIN UPDATES
+      </h1>
+
+      <p class="desc reveal delay-2">
+        Explore neuroscience facts, myth busting,
+        psychology updates and criminal psychology studies.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+
+  <section class="faq-section">
+
+    <!-- FAQ CARD -->
+
+    <div class="faq-card reveal">
+
+      <button class="faq-question">
+
+        <span>
+          DO HUMANS ONLY USE 10% OF THEIR BRAIN?
+        </span>
+
+        <span class="plus">+</span>
+
+      </button>
+
+      <div class="faq-answer">
+
+        <p>
+          No. Brain scans show activity throughout nearly
+          every region of the brain during daily tasks.
+          The 10% myth is scientifically false.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- FAQ CARD -->
+
+    <div class="faq-card reveal delay-1">
+
+      <button class="faq-question">
+
+        <span>
+          WHY DO WE DREAM?
+        </span>
+
+        <span class="plus">+</span>
+
+      </button>
+
+      <div class="faq-answer">
+
+        <p>
+          Dreams may help emotional processing,
+          memory consolidation and subconscious thinking.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- FAQ CARD -->
+
+    <div class="faq-card reveal delay-2">
+
+      <button class="faq-question">
+
+        <span>
+          CAN THE BRAIN REWIRE ITSELF?
+        </span>
+
+        <span class="plus">+</span>
+
+      </button>
+
+      <div class="faq-answer">
+
+        <p>
+          Yes. Neuroplasticity allows the brain
+          to form new neural connections and adapt.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- UPDATE CARDS -->
+
+  <section class="updates-grid">
+
+    <!-- CARD -->
+
+    <div class="update-card reveal">
+
+      <div class="card-glow"></div>
+
+      <p class="update-tag">
+        WEEKLY SERIES
+      </p>
+
+      <h2>
+        Mythbusting Mondays
+      </h2>
+
+      <p class="update-text">
+        Breaking down popular neuroscience myths
+        with scientific evidence and modern studies.
+      </p>
+
+      <ul>
+        <li>10% Brain Myth</li>
+        <li>Left vs Right Brain</li>
+        <li>Photographic Memory</li>
+      </ul>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="update-card reveal delay-1">
+
+      <div class="card-glow"></div>
+
+      <p class="update-tag">
+        CRIMINAL PSYCHOLOGY
+      </p>
+
+      <h2>
+        Serial Killers
+      </h2>
+
+      <p class="update-text">
+        Exploring neurological patterns,
+        psychopathy and criminal behaviour.
+      </p>
+
+      <ul>
+        <li>Psychopathy</li>
+        <li>Brain Trauma</li>
+        <li>Behaviour Analysis</li>
+      </ul>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="update-card reveal delay-2">
+
+      <div class="card-glow"></div>
+
+      <p class="update-tag">
+        UPCOMING
+      </p>
+
+      <h2>
+        Future Topics
+      </h2>
+
+      <p class="update-text">
+        Upcoming neuroscience and psychology
+        content releasing soon.
+      </p>
+
+      <ul>
+        <li>Sleep Science</li>
+        <li>Lucid Dreaming</li>
+        <li>AI & Consciousness</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    // REVEALS
+
+    window.addEventListener("load", () => {
+
+      const reveals =
+      document.querySelectorAll(".reveal");
+
+      reveals.forEach((element, index) => {
+
+        setTimeout(() => {
+
+          element.classList.add("active");
+
+        }, index * 180);
+
+      });
+
+    });
+
+    // FAQ OPEN
+
+    const questions =
+    document.querySelectorAll(".faq-question");
+
+    questions.forEach((question) => {
+
+      question.addEventListener("click", () => {
+
+        const answer =
+        question.parentElement.querySelector(
+          ".faq-answer"
+        );
+
+        const plus =
+        question.querySelector(".plus");
+
+        answer.classList.toggle("open");
+
+        plus.classList.toggle("rotate");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
