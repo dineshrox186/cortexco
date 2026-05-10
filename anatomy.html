@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>thecortexco_ | Anatomy</title>
+
+  <link rel="stylesheet" href="anatomy.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- PARTICLES -->
+
+  <div class="particles"></div>
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <div class="logo">
+      thecortexco_
+    </div>
+
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="anatomy.html" class="active-nav">ANATOMY</a></li>
+      <li><a href="functions.html">FUNCTIONS</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="brain-glow"></div>
+
+    <div class="brain-bg">
+
+      <img
+        src="assets/images/brain.logo.jpg"
+        alt="brain"
+      >
+
+    </div>
+
+    <div class="hero-content">
+
+      <p class="small reveal">
+        THE HUMAN BRAIN
+      </p>
+
+      <h1 class="reveal delay-1">
+        STRUCTURE OF <br>
+        THE HUMAN BRAIN
+      </h1>
+
+      <p class="desc reveal delay-2">
+        Explore the systems, neural pathways and biological
+        architecture powering human consciousness.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+
+  <section class="stats-section">
+
+    <div class="stat-card">
+
+      <h2>86B+</h2>
+
+      <p>Neurons</p>
+
+    </div>
+
+    <div class="stat-card">
+
+      <h2>100T</h2>
+
+      <p>Connections</p>
+
+    </div>
+
+    <div class="stat-card">
+
+      <h2>20W</h2>
+
+      <p>Power Usage</p>
+
+    </div>
+
+  </section>
+
+  <!-- BRAIN PARTS -->
+
+  <section class="brain-sections">
+
+    <!-- CEREBRUM -->
+
+    <div class="brain-part reveal">
+
+      <button class="brain-title">
+
+        <span>CEREBRUM</span>
+
+        <span class="plus">+</span>
+
+      </button>
+
+      <div class="brain-preview">
+
+        <p>
+          The cerebrum controls intelligence,
+          creativity, memory and conscious thought.
+        </p>
+
+      </div>
+
+      <div class="brain-dropdown">
+
+        <div class="brain-info-grid">
+
+          <div class="info-box">
+
+            <h4>LANGUAGE</h4>
+
+            <p>
+              Controls communication and speech processing.
+            </p>
+
+          </div>
+
+          <div class="info-box">
+
+            <h4>MEMORY</h4>
+
+            <p>
+              Stores long term experiences and learning.
+            </p>
+
+          </div>
+
+          <div class="info-box">
+
+            <h4>THINKING</h4>
+
+            <p>
+              Enables reasoning, planning and imagination.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CEREBELLUM -->
+
+    <div class="brain-part reveal">
+
+      <button class="brain-title">
+
+        <span>CEREBELLUM</span>
+
+        <span class="plus">+</span>
+
+      </button>
+
+      <div class="brain-preview">
+
+        <p>
+          Fine tunes balance, coordination and movement precision.
+        </p>
+
+      </div>
+
+      <div class="brain-dropdown">
+
+        <div class="brain-info-grid">
+
+          <div class="info-box">
+
+            <h4>BALANCE</h4>
+
+            <p>
+              Maintains body equilibrium during movement.
+            </p>
+
+          </div>
+
+          <div class="info-box">
+
+            <h4>COORDINATION</h4>
+
+            <p>
+              Synchronizes muscle movements precisely.
+            </p>
+
+          </div>
+
+          <div class="info-box">
+
+            <h4>REFLEXES</h4>
+
+            <p>
+              Improves physical reaction timing.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BRAIN STEM -->
+
+    <div class="brain-part reveal">
+
+      <button class="brain-title">
+
+        <span>BRAIN STEM</span>
+
+        <span class="plus">+</span>
+
+      </button>
+
+      <div class="brain-preview">
+
+        <p>
+          Controls automatic survival systems essential for life.
+        </p>
+
+      </div>
+
+      <div class="brain-dropdown">
+
+        <div class="brain-info-grid">
+
+          <div class="info-box">
+
+            <h4>BREATHING</h4>
+
+            <p>
+              Regulates respiratory activity automatically.
+            </p>
+
+          </div>
+
+          <div class="info-box">
+
+            <h4>HEART RATE</h4>
+
+            <p>
+              Controls heartbeat and blood pressure.
+            </p>
+
+          </div>
+
+          <div class="info-box">
+
+            <h4>SLEEP</h4>
+
+            <p>
+              Maintains unconscious body functions during rest.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    window.addEventListener("load", () => {
+
+      const reveals =
+      document.querySelectorAll(".reveal");
+
+      reveals.forEach((element, index) => {
+
+        setTimeout(() => {
+
+          element.classList.add("active");
+
+        }, index * 180);
+
+      });
+
+    });
+
+    // SCROLL ANIMATIONS
+
+    const observer =
+    new IntersectionObserver((entries) => {
+
+      entries.forEach((entry) => {
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add("active");
+
+        }
+
+      });
+
+    }, {
+      threshold:0.2
+    });
+
+    document
+    .querySelectorAll(".stat-card")
+    .forEach((card) => {
+
+      observer.observe(card);
+
+    });
+
+    // DROPDOWNS
+
+    const titles =
+    document.querySelectorAll(".brain-title");
+
+    titles.forEach((title) => {
+
+      title.addEventListener("click", () => {
+
+        const dropdown =
+        title.parentElement.querySelector(
+          ".brain-dropdown"
+        );
+
+        const plus =
+        title.querySelector(".plus");
+
+        dropdown.classList.toggle("open");
+
+        plus.classList.toggle("rotate");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>

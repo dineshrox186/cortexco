@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>thecortexco_</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <div class="logo">
+      thecortexco_
+    </div>
+
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="anatomy.html">ANATOMY</a></li>
+      <li><a href="functions.html">FUNCTIONS</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="brain-bg">
+
+      <img
+        src="assets/images/brain.logo.jpg"
+        alt="brain"
+      >
+
+    </div>
+
+    <div class="hero-content">
+
+      <p class="small reveal">
+        THE HUMAN BRAIN
+      </p>
+
+      <h1 class="reveal delay-1">
+        THE MOST <br>
+        COMPLEX THING <br>
+        WE KNOW.
+      </h1>
+
+      <p class="desc reveal delay-2">
+        Explore the extraordinary organ that controls memory,
+        thought, emotion and consciousness.
+      </p>
+
+      <a
+        href="anatomy.html"
+        class="main-btn reveal delay-3"
+      >
+        EXPLORE ANATOMY
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOUNDER INFO -->
+
+  <section class="founder-section">
+
+    <div class="founder-left reveal">
+
+      <p class="founder-small">
+        FOUNDER
+      </p>
+
+      <h2>
+        Built to explore the complexity of the human mind
+        through futuristic minimal design and neuroscience inspired visuals.
+      </h2>
+
+    </div>
+
+    <div class="founder-right reveal delay-1">
+
+      <div class="founder-card">
+
+        <h3>FOUNDER</h3>
+
+        <p class="founder-name">
+          Blaah
+        </p>
+
+        <p class="founder-role">
+          Founder 
+        </p>
+
+        <a
+          href="https://instagram.com/thecortexco_"
+          target="_blank"
+          class="insta"
+        >
+          @thecortexco_
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    window.addEventListener("load", () => {
+
+      const reveals =
+      document.querySelectorAll(".reveal");
+
+      reveals.forEach((element, index) => {
+
+        setTimeout(() => {
+
+          element.classList.add("active");
+
+        }, index * 220);
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
