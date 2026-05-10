@@ -112,6 +112,8 @@ body::before{
   gap:45px;
 
   list-style:none;
+
+  align-items:center;
 }
 
 .navbar a{
@@ -446,22 +448,181 @@ body::before{
   transition-delay:0.25s;
 }
 
+/* TABLET */
+
+@media(max-width:1024px){
+
+  .hero-content h1{
+    font-size:78px;
+  }
+
+  .functions-grid{
+    grid-template-columns:1fr 1fr;
+
+    padding:20px 40px 100px;
+  }
+
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
 
+  body{
+    overflow-x:hidden;
+  }
+
+  /* NAVBAR */
+
+  .navbar{
+    height:auto;
+
+    padding:20px;
+
+    flex-direction:column;
+
+    gap:18px;
+  }
+
+  .logo{
+    position:relative;
+
+    left:0;
+
+    top:0;
+
+    transform:none;
+
+    font-size:20px;
+  }
+
+  .navbar ul{
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+  }
+
+  .navbar a{
+    font-size:10px;
+
+    letter-spacing:2px;
+  }
+
+  /* HERO */
+
+  .hero{
+    padding:180px 20px 100px;
+
+    min-height:auto;
+  }
+
+  .hero-glow{
+    width:450px;
+    height:450px;
+    filter:blur(70px);
+  }
+
+  .small{
+    font-size:11px;
+    letter-spacing:4px;
+  }
+
   .hero-content h1{
     font-size:58px;
+
+    line-height:1;
+
+    letter-spacing:-2px;
   }
 
   .desc{
     font-size:18px;
+
+    line-height:1.7;
+
+    padding:0 10px;
   }
+
+  /* GRID */
 
   .functions-grid{
     grid-template-columns:1fr;
 
     padding:20px;
+
+    gap:25px;
+  }
+
+  /* CARDS */
+
+  .function-card{
+    height:auto;
+
+    min-height:340px;
+  }
+
+  .card-inner{
+    transform:none !important;
+  }
+
+  .function-card:hover .card-inner{
+    transform:none;
+  }
+
+  .card-front,
+  .card-back{
+    position:relative;
+
+    transform:none;
+
+    min-height:auto;
+  }
+
+  .card-back{
+    margin-top:15px;
+  }
+
+  .card-front h2{
+    font-size:32px;
+  }
+
+  .front-info,
+  .card-back p,
+  .card-back li{
+    font-size:14px;
+  }
+
+  .card-front span{
+    font-size:52px;
+  }
+
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media(max-width:480px){
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .desc{
+    font-size:15px;
+  }
+
+  .card-front,
+  .card-back{
+    padding:25px;
+  }
+
+  .card-front h2{
+    font-size:26px;
+  }
+
+  .card-front span{
+    font-size:40px;
   }
 
 }
