@@ -626,3 +626,7 @@ body::before{
   }
 
 }
+
+*{
+    -webkit-tap-highlight-color: transparent;
+}
